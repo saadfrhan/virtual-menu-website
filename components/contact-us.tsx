@@ -27,7 +27,7 @@ export default function ContactDrawer() {
     return (
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogTrigger asChild>
-          <Button variant="outline">About us</Button>
+          <Button variant="outline" className="w-full">About us</Button>
         </DialogTrigger>
         <DialogContent>
           <DialogHeader className="text-left">
@@ -69,7 +69,7 @@ export default function ContactDrawer() {
   return (
     <Drawer open={open} onOpenChange={setOpen}>
       <DrawerTrigger asChild>
-        <Button variant="outline">Edit Profile</Button>
+        <Button variant="outline" className="w-full">About us</Button>
       </DrawerTrigger>
       <DrawerContent>
         <DrawerHeader className="text-left">
