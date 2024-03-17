@@ -17,9 +17,10 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function ContactDrawer() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   const isDesktop = useMediaQuery("(min-width: 768px)");
 
   if (isDesktop) {
