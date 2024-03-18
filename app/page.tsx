@@ -4,9 +4,9 @@ import { columns } from "./columns";
 
 export default function Home() {
   return (
-    <div className="space-y-3">
+    <div className="space-y-4">
       <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-        menu
+        Menu
       </h1>
       <DataTable
         columns={columns}
