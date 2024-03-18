@@ -28,7 +28,7 @@ export default function ContactDrawer() {
     );
   } else
     return (
-      <Drawer open={open} onOpenChange={setOpen} className="relative">
+      <Drawer open={open} onOpenChange={setOpen}>
         <DrawerTrigger asChild>
           <Button variant="outline" className="w-full">
             About us
