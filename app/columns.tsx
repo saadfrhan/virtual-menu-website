@@ -21,7 +21,7 @@ export const columns: ColumnDef<Item>[] = [
     header: ({ column }) => {
       const order = column.getIsSorted();
       return (
-        <div className="flex justify-end items-center">
+        <div className="flex justify-center items-center">
           <Button
             size="sm"
             variant="ghost"
@@ -40,8 +40,8 @@ export const columns: ColumnDef<Item>[] = [
     },
     cell: ({ row }) => {
       return (
-        <div className="font-medium text-right pr-5 max-sm:pr-0">
-          <p>{row.getValue("price")}</p>
+        <div className="font-medium text-center max-sm:pr-0">
+          <p>Rs. {row.getValue("price")}</p>
         </div>
       );
     },

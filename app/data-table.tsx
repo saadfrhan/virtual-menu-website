@@ -22,6 +22,9 @@ import {
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import ContactDrawer from "@/components/contact-us";
+import { Phone } from "lucide-react";
+import { Button, buttonVariants } from "@/components/ui/button";
+import Link from "next/link";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -51,7 +54,7 @@ export function DataTable<TData, TValue>({
 
   return (
     <div>
-      <div className="flex max-sm:flex-col w-full justify-between gap-2 items-center py-4">
+      <div className="flex max-sm:flex-col w-full justify-between gap-3 items-center py-4">
         <Input
           placeholder="Filter items..."
           value={(table.getColumn("item")?.getFilterValue() as string) ?? ""}
@@ -79,6 +82,7 @@ export function DataTable<TData, TValue>({
                     </TableHead>
                   );
                 })}
+                <TableHead></TableHead>
               </TableRow>
             ))}
           </TableHeader>
@@ -97,6 +101,17 @@ export function DataTable<TData, TValue>({
                       )}
                     </TableCell>
                   ))}
+                  <TableCell className="text-right">
+                    <Link
+                      href="tel:03243276902"
+                      className={buttonVariants({
+                        size: "icon",
+                        variant: "outline",
+                      })}
+                    >
+                      <Phone className="w-4 h-4" />
+                    </Link>
+                  </TableCell>
                 </TableRow>
               ))
             ) : (

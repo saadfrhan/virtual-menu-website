@@ -2,13 +2,11 @@ import {
   Table,
   TableBody,
   TableCell,
-  TableFooter,
   TableHead,
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
 import { menu } from "@/lib/data";
-import { Badge } from "./ui/badge";
 
 export default function MenuTable() {
   return (
