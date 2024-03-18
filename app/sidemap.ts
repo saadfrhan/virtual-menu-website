@@ -1,8 +1,12 @@
-export default async function sitemap() {
-  let routes = ["/"].map((route) => ({
-    url: `https://ahmedshahlassicenter.vercel.app${route}`,
-    lastModified: new Date().toISOString().split("T")[0],
-  }));
+import { MetadataRoute } from "next";
 
-  return [...routes];
+export default function sitemap(): MetadataRoute.Sitemap {
+  return [
+    {
+      url: "https://ahmedshahlassicenter.vercel.app",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 1,
+    },
+  ];
 }
